@@ -20,7 +20,7 @@ function askProducts(){
         elements.forEach( obj =>{
             if(
                 obj.innerHTML.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "").toLowerCase() == sku[i]){
-                obj.parentNode.parentNode.parentNode.parentNode.children[0].children[1].innerHTML += `<svg id="img3DBtn" class="btnMudi3D" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+                obj.parentNode.parentNode.parentNode.parentNode.children[0].children[0].innerHTML += `<svg id="img3DBtn" class="btnMudi3D" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
                 <defs>
                     <style>
                         .cls-1{
@@ -55,15 +55,34 @@ function askProducts(){
     link.innerHTML = `
     svg#img3DBtn {
         width: 60px;
-        margin-top:-20px
+        margin-top:-20px;
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        right: 0;
     }
     .m-product-card__tags{
         align-items:flex-start
     }
+    .m-product-card__media{
+        position:relative
+    }
+
+    @media screen and (max-width: 500px) {
+        svg#img3DBtn {
+            width: 40px;
+            margin-top:-20px;
+            position: absolute;
+            z-index: 1;
+            top: 15px;
+            right: 0;
+        }
+    }
+    
+    
     `;
 
     document.body.appendChild(link);
-    
 };
 
 askProducts();
