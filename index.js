@@ -71,7 +71,7 @@ function askProducts(){
     @media screen and (max-width: 500px) {
         svg#img3DBtn {
             width: 40px;
-            margin-top:-20px;
+            margin-top:-15px;
             position: absolute;
             z-index: 1;
             top: 15px;
