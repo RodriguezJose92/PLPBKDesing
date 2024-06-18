@@ -4,7 +4,8 @@ let sku = [
     "sofacamalyon"          , 
     "sofacamavenecia"       , 
     "sofacamanantes"        ,
-    "respaldotubularpremium"
+    "respaldotubularpremium",
+    "sofacamamykonos"        
 ];
 
 /** Verificación de productos y renderización de flags */
